@@ -34,22 +34,23 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="80K-RU-Frh" kind="show" id="JQi-52-M0J"/>
+                        <outlet property="calendar" destination="hWW-gA-8ed" id="Uvi-vX-rxa"/>
+                        <segue destination="80K-RU-Frh" kind="show" identifier="table" id="JQi-52-M0J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-57" y="116"/>
         </scene>
-        <!--View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="1BI-ry-I6d">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="80K-RU-Frh" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="80K-RU-Frh" customClass="TableViewController" customModule="DateTodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lgo-ma-jOe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SpY-yr-M4C">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SpY-yr-M4C">
                                 <rect key="frame" x="0.0" y="90" width="414" height="772"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -76,9 +77,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="fV6-Pu-mPC" kind="show" id="sb9-pD-ir5"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -86,6 +84,9 @@
                                 <rect key="frame" x="20" y="54" width="44" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="back:" destination="80K-RU-Frh" eventType="touchUpInside" id="yMw-WE-Trs"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGO-rU-Uay">
                                 <rect key="frame" x="40" y="54" width="334" height="24"/>
@@ -97,6 +98,9 @@
                                 <rect key="frame" x="364" y="54" width="30" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="＋"/>
+                                <connections>
+                                    <segue destination="fV6-Pu-mPC" kind="show" id="YKK-85-3Ie"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -117,6 +121,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="fDr-uc-Y5z"/>
                     <connections>
+                        <outlet property="dateLabel" destination="xGO-rU-Uay" id="TM7-UO-VSc"/>
+                        <outlet property="tableView" destination="SpY-yr-M4C" id="LxS-9A-OHI"/>
                         <segue destination="fV6-Pu-mPC" kind="show" identifier="cellSegue" id="Swq-zY-qZE"/>
                     </connections>
                 </viewController>
@@ -124,10 +130,10 @@
             </objects>
             <point key="canvasLocation" x="714.49275362318849" y="115.84821428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Add View Controller-->
         <scene sceneID="0Si-kJ-QDp">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="fV6-Pu-mPC" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="fV6-Pu-mPC" customClass="AddViewController" customModule="DateTodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nSt-kR-NFy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,11 +175,17 @@
                                 <rect key="frame" x="186.5" y="520" width="41" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="ADD"/>
+                                <connections>
+                                    <action selector="add:" destination="fV6-Pu-mPC" eventType="touchUpInside" id="OWO-8Q-NuZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87P-oB-63E">
                                 <rect key="frame" x="181" y="576" width="52" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="BACK"/>
+                                <connections>
+                                    <action selector="bsck:" destination="fV6-Pu-mPC" eventType="touchUpInside" id="giX-uO-Qdm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ts-dn-8YK">
                                 <rect key="frame" x="10" y="346" width="394" height="24"/>
@@ -215,6 +227,11 @@
                         <viewLayoutGuide key="safeArea" id="6rR-am-4wm"/>
                     </view>
                     <navigationItem key="navigationItem" id="o1q-vU-qXw"/>
+                    <connections>
+                        <outlet property="datePicker" destination="Ho5-hf-04t" id="jsz-8S-gas"/>
+                        <outlet property="memoTextView" destination="tA5-54-Ep4" id="1dO-8z-8Ae"/>
+                        <outlet property="titleTextField" destination="bCd-PX-9Uo" id="PU6-Bh-acZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfl-3i-lru" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
