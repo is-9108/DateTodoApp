@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1140C278C09B0A0B38CFB202 /* Pods_DateTodoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A94914CC70240A519A0C4090 /* Pods_DateTodoApp.framework */; };
 		E6941476243B636A00C4EB2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6941475243B636A00C4EB2E /* AppDelegate.swift */; };
 		E6941478243B636A00C4EB2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6941477243B636A00C4EB2E /* SceneDelegate.swift */; };
 		E694147A243B636A00C4EB2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6941479243B636A00C4EB2E /* ViewController.swift */; };
 		E694147D243B636A00C4EB2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E694147B243B636A00C4EB2E /* Main.storyboard */; };
 		E694147F243B636B00C4EB2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E694147E243B636B00C4EB2E /* Assets.xcassets */; };
 		E6941482243B636B00C4EB2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6941480243B636B00C4EB2E /* LaunchScreen.storyboard */; };
+		E694148A243B671A00C4EB2E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6941489243B671A00C4EB2E /* TableViewController.swift */; };
+		E694148C243B672E00C4EB2E /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694148B243B672E00C4EB2E /* AddViewController.swift */; };
+		E694148E243B674500C4EB2E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694148D243B674500C4EB2E /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60F7E266F948E44051A6BEF6 /* Pods-DateTodoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateTodoApp.release.xcconfig"; path = "Target Support Files/Pods-DateTodoApp/Pods-DateTodoApp.release.xcconfig"; sourceTree = "<group>"; };
+		69CDBECB3B09687984431C8D /* Pods-DateTodoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateTodoApp.debug.xcconfig"; path = "Target Support Files/Pods-DateTodoApp/Pods-DateTodoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A94914CC70240A519A0C4090 /* Pods_DateTodoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DateTodoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6941472243B636A00C4EB2E /* DateTodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateTodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6941475243B636A00C4EB2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6941477243B636A00C4EB2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		E694147E243B636B00C4EB2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6941481243B636B00C4EB2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6941483243B636B00C4EB2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6941489243B671A00C4EB2E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		E694148B243B672E00C4EB2E /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		E694148D243B674500C4EB2E /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1140C278C09B0A0B38CFB202 /* Pods_DateTodoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DBA1D09AECBE4AA6479C653 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A94914CC70240A519A0C4090 /* Pods_DateTodoApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B319BBEABB6BF58BBC143E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69CDBECB3B09687984431C8D /* Pods-DateTodoApp.debug.xcconfig */,
+				60F7E266F948E44051A6BEF6 /* Pods-DateTodoApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E6941469243B636A00C4EB2E = {
 			isa = PBXGroup;
 			children = (
 				E6941474243B636A00C4EB2E /* DateTodoApp */,
 				E6941473243B636A00C4EB2E /* Products */,
+				8B319BBEABB6BF58BBC143E4 /* Pods */,
+				5DBA1D09AECBE4AA6479C653 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +91,9 @@
 				E6941477243B636A00C4EB2E /* SceneDelegate.swift */,
 				E6941479243B636A00C4EB2E /* ViewController.swift */,
 				E694147B243B636A00C4EB2E /* Main.storyboard */,
+				E6941489243B671A00C4EB2E /* TableViewController.swift */,
+				E694148B243B672E00C4EB2E /* AddViewController.swift */,
+				E694148D243B674500C4EB2E /* Task.swift */,
 				E694147E243B636B00C4EB2E /* Assets.xcassets */,
 				E6941480243B636B00C4EB2E /* LaunchScreen.storyboard */,
 				E6941483243B636B00C4EB2E /* Info.plist */,
@@ -74,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6941486243B636B00C4EB2E /* Build configuration list for PBXNativeTarget "DateTodoApp" */;
 			buildPhases = (
+				941CA8D302284732A4B1A6E6 /* [CP] Check Pods Manifest.lock */,
 				E694146E243B636A00C4EB2E /* Sources */,
 				E694146F243B636A00C4EB2E /* Frameworks */,
 				E6941470243B636A00C4EB2E /* Resources */,
+				10F9CBEC535A52F1071F3A42 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +169,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10F9CBEC535A52F1071F3A42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DateTodoApp/Pods-DateTodoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DateTodoApp/Pods-DateTodoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DateTodoApp/Pods-DateTodoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		941CA8D302284732A4B1A6E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DateTodoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E694146E243B636A00C4EB2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E694148C243B672E00C4EB2E /* AddViewController.swift in Sources */,
 				E694147A243B636A00C4EB2E /* ViewController.swift in Sources */,
 				E6941476243B636A00C4EB2E /* AppDelegate.swift in Sources */,
 				E6941478243B636A00C4EB2E /* SceneDelegate.swift in Sources */,
+				E694148E243B674500C4EB2E /* Task.swift in Sources */,
+				E694148A243B671A00C4EB2E /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +363,7 @@
 		};
 		E6941487243B636B00C4EB2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69CDBECB3B09687984431C8D /* Pods-DateTodoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +382,7 @@
 		};
 		E6941488243B636B00C4EB2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60F7E266F948E44051A6BEF6 /* Pods-DateTodoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
